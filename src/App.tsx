@@ -6,9 +6,9 @@ function App() {
       {/* Navigation */}
       <nav className="nav">
         <div className="container">
-          <div className="nav-logo">
-            drop<span className="accent">.js</span>
-          </div>
+          <a href="#" className="nav-logo">
+            <img src="/logo-transparent.png" alt="drop.js" className="nav-logo-img" />
+          </a>
           <ul className="nav-links">
             <li><a href="#features">Features</a></li>
             <li><a href="#code">Code</a></li>
@@ -103,8 +103,8 @@ function App() {
               </div>
               <h3>Drupal Migration</h3>
               <p>
-                Read a Drupal database and migrate content directly with a single command.
-                Bring your existing content into a modern stack.
+                Drupal-compatible multi-table storage means seamless migration.
+                Analyze, generate schemas, and migrate content with a single CLI command.
               </p>
             </div>
 
@@ -123,8 +123,8 @@ function App() {
               </div>
               <h3>Auth &amp; Permissions</h3>
               <p>
-                Drupal-style role-based access control out of the box.
-                Define roles, assign permissions, and protect your content.
+                Role-based access control, session management, password reset,
+                and first-user auto-admin. Secure by default, extensible by design.
               </p>
             </div>
 
@@ -158,6 +158,39 @@ function App() {
               <p>
                 Async event bus with priority-ordered hooks. React to presave, insert,
                 update, delete, and query events across all entity types.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon cyan">
+                <span>&#x25b6;</span>
+              </div>
+              <h3>Taxonomy System</h3>
+              <p>
+                Vocabularies with hierarchical terms, tree API, content counts,
+                and drag-to-reorder — all managed from the admin UI or REST API.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon purple">
+                <span>&#x21ba;</span>
+              </div>
+              <h3>Revision History</h3>
+              <p>
+                Built-in content versioning. List, load, revert, and diff between
+                revisions — every save is tracked automatically.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon green">
+                <span>&#x25a3;</span>
+              </div>
+              <h3>File Uploads</h3>
+              <p>
+                Upload API with media library and auto-generated image styles —
+                thumbnail, medium, and large — powered by sharp.
               </p>
             </div>
           </div>
@@ -242,8 +275,12 @@ function App() {
 {'\n  '}.<span className="syn-function">execute</span><span className="syn-punctuation">()</span><span className="syn-punctuation">;</span>
 {'\n'}
 {'\n'}<span className="syn-comment">// REST API auto-generated</span>
-{'\n'}<span className="syn-comment">// GET  /api/node/article</span>
-{'\n'}<span className="syn-comment">// POST /api/node/article</span>
+{'\n'}<span className="syn-comment">// GET    /api/node/article</span>
+{'\n'}<span className="syn-comment">// GET    /api/node/article/:id</span>
+{'\n'}<span className="syn-comment">// POST   /api/node/article</span>
+{'\n'}<span className="syn-comment">// PATCH  /api/node/article/:id</span>
+{'\n'}<span className="syn-comment">// DELETE /api/node/article/:id</span>
+{'\n'}<span className="syn-comment">// ?sort=-created&amp;include=field_tags</span>
               </pre>
             </div>
           </div>
