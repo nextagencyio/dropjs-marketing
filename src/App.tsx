@@ -66,11 +66,11 @@ function App() {
               <span className="stat-label">Field Types</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">150+</span>
+              <span className="stat-number">230+</span>
               <span className="stat-label">API Endpoints</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">61</span>
+              <span className="stat-number">57</span>
               <span className="stat-label">Admin Pages</span>
             </div>
             <div className="stat-item">
@@ -93,7 +93,7 @@ function App() {
             <h2 className="section-title">Everything you need to build content-driven apps</h2>
             <p className="section-subtitle">
               Drupal's proven content architecture, rebuilt for Node.js.
-              From entity/field system to GraphQL, from admin UI to Docker deployment — everything included.
+              From entity/field system to GraphQL, admin UI and beyond — everything included.
             </p>
           </div>
 
@@ -102,7 +102,7 @@ function App() {
               <h3 className="feature-group-title cyan">Content Management</h3>
               <ul className="feature-list">
                 <li><strong>Entity/Field System</strong> — 18 field types with configurable content types in JSON</li>
-                <li><strong>Taxonomy</strong> — Vocabularies with hierarchical terms, tree API, drag-to-reorder</li>
+                <li><strong>Taxonomy</strong> — Vocabularies with hierarchical terms, tree API, weight-based reordering</li>
                 <li><strong>Revision History</strong> — Full versioning with list, load, revert, and diff</li>
                 <li><strong>Comments</strong> — Threaded commenting with Drupal-style thread ordering</li>
                 <li><strong>Content Workflow</strong> — Moderation states: draft, review, published, archived</li>
@@ -112,7 +112,7 @@ function App() {
             <div className="feature-group">
               <h3 className="feature-group-title purple">API &amp; Integration</h3>
               <ul className="feature-list">
-                <li><strong>Auto-Generated REST API</strong> — Full CRUD for every entity type, 150+ endpoints</li>
+                <li><strong>Auto-Generated REST API</strong> — Full CRUD for every entity type, 230+ endpoints</li>
                 <li><strong>GraphQL</strong> — Dynamic schema generation with queries, mutations, introspection</li>
                 <li><strong>Webhooks</strong> — HTTP callbacks with HMAC signing for entity lifecycle events</li>
                 <li><strong>JSON:API</strong> — Optional JSON:API 1.0 output format via Accept header</li>
@@ -124,11 +124,11 @@ function App() {
             <div className="feature-group">
               <h3 className="feature-group-title pink">Admin &amp; UI</h3>
               <ul className="feature-list">
-                <li><strong>Admin UI</strong> — 61 pages built with Next.js 15 + Tailwind for content, structure, config</li>
+                <li><strong>Admin UI</strong> — 57 pages built with Next.js 15 + Tailwind for content, structure, config</li>
                 <li><strong>Layout Builder</strong> — Configurable page layouts with sections and 5 layout types</li>
                 <li><strong>Views System</strong> — Drupal Views-inspired list builder with filters, sorts, pagination</li>
                 <li><strong>Media Library</strong> — File uploads with image styles (thumbnail, medium, large)</li>
-                <li><strong>Menu System</strong> — Hierarchical navigation menus with drag-and-drop ordering</li>
+                <li><strong>Menu System</strong> — Hierarchical navigation menus with weight-based ordering</li>
               </ul>
             </div>
 
@@ -136,10 +136,9 @@ function App() {
               <h3 className="feature-group-title green">Developer Experience</h3>
               <ul className="feature-list">
                 <li><strong>Database Agnostic</strong> — SQLite for dev, MySQL/PostgreSQL for production</li>
-                <li><strong>AI-Native</strong> — Every API surface designed to be discoverable by AI coding agents</li>
+                <li><strong>Full TypeScript</strong> — End-to-end type safety across entities, queries, fields, and API handlers</li>
                 <li><strong>18 Field Types</strong> — string, text, integer, float, boolean, email, date, link, file, image, color, and more</li>
-                <li><strong>Drupal Migration</strong> — Analyze, generate schemas, and migrate content with one CLI command</li>
-                <li><strong>Docker Ready</strong> — Multi-stage Dockerfile and docker-compose for production deployment</li>
+                <li><strong>Drupal Migration</strong> — Analyze, generate schemas, and migrate content via CLI</li>
                 <li><strong>Event System</strong> — Async event bus with priority-ordered hooks</li>
               </ul>
             </div>
@@ -147,7 +146,7 @@ function App() {
             <div className="feature-group">
               <h3 className="feature-group-title orange">Enterprise</h3>
               <ul className="feature-list">
-                <li><strong>Auth &amp; Permissions</strong> — RBAC with 21 permissions, sessions, password reset, CSRF</li>
+                <li><strong>Auth &amp; Permissions</strong> — RBAC with 19 permissions, sessions, password reset, CSRF</li>
                 <li><strong>Multilingual</strong> — 16 default languages with translation CRUD and language negotiation</li>
                 <li><strong>Search</strong> — FTS5 full-text search with porter stemming and auto-indexing</li>
                 <li><strong>Scheduled Publishing</strong> — Time-based content state transitions with cron</li>
