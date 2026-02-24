@@ -217,7 +217,7 @@ function App() {
                 <span className="code-panel-title">app.ts</span>
               </div>
               <pre>
-<span className="syn-keyword">import</span> {'{'} <span className="syn-type">Entity</span> {'}'} <span className="syn-keyword">from</span> <span className="syn-string">'@dropjs/core'</span><span className="syn-punctuation">;</span>
+<span className="syn-keyword">import</span> {'{'} <span className="syn-type">Entity</span> {'}'} <span className="syn-keyword">from</span> <span className="syn-string">'dropjs'</span><span className="syn-punctuation">;</span>
 {'\n'}
 {'\n'}<span className="syn-comment">// Create an article</span>
 {'\n'}<span className="syn-keyword">const</span> article <span className="syn-operator">=</span> <span className="syn-keyword">await</span> <span className="syn-type">Entity</span>.<span className="syn-function">create</span><span className="syn-punctuation">(</span>
@@ -255,9 +255,9 @@ function App() {
         <div className="container">
           <div className="section-header">
             <span className="section-label">Architecture</span>
-            <h2 className="section-title">Modular by design</h2>
+            <h2 className="section-title">One package, clean domains</h2>
             <p className="section-subtitle">
-              Use only what you need. Every package is independently installable and composable.
+              A single <code>dropjs</code> package with domain-based modules — everything included, nothing to wire up.
             </p>
           </div>
 
@@ -269,22 +269,23 @@ function App() {
             <div className="arch-connector">|</div>
 
             <div className="arch-layer">
-              <div className="arch-box api-layer">@dropjs/api &middot; @dropjs/admin &middot; @dropjs/cli</div>
+              <div className="arch-box core-layer">dropjs</div>
             </div>
 
             <div className="arch-connector">|</div>
 
             <div className="arch-modules">
-              <div className="arch-module">@dropjs/auth</div>
-              <div className="arch-module">@dropjs/field</div>
-              <div className="arch-module">@dropjs/migrate</div>
-              <div className="arch-module">@dropjs/db</div>
+              <div className="arch-module">core</div>
+              <div className="arch-module">api</div>
+              <div className="arch-module">auth</div>
+              <div className="arch-module">field</div>
             </div>
 
-            <div className="arch-connector">|</div>
-
-            <div className="arch-layer">
-              <div className="arch-box core-layer">@dropjs/core</div>
+            <div className="arch-modules">
+              <div className="arch-module">db</div>
+              <div className="arch-module">migrate</div>
+              <div className="arch-module">admin</div>
+              <div className="arch-module">cli</div>
             </div>
 
             <div className="arch-connector">|</div>
