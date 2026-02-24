@@ -27,12 +27,13 @@ function App() {
             Open Source &middot; ISC License
           </div>
           <h1>
-            The CMS framework for{' '}
-            <span className="gradient-text">the AI era</span>
+            Drupal's power,{' '}
+            <span className="gradient-text">headless on Node.js</span>
           </h1>
           <p className="hero-subtitle">
-            Define content types in JSON. Get a full REST API and GraphQL endpoint instantly.
-            150+ endpoints, 61 admin pages, and 499 passing tests — built on Node.js with Drupal's proven architecture.
+            A headless Node.js port of Drupal's entity/field architecture.
+            Define content types in JSON, get a full REST API and GraphQL endpoint instantly.
+            150+ endpoints, 61 admin pages, and 499 passing tests.
           </p>
           <div className="hero-buttons">
             <a href="#quickstart" className="btn btn-primary">
@@ -91,7 +92,8 @@ function App() {
             <span className="section-label">Features</span>
             <h2 className="section-title">Everything you need to build content-driven apps</h2>
             <p className="section-subtitle">
-              From content modeling to GraphQL, from admin UI to Docker deployment — everything included out of the box.
+              Drupal's proven content architecture, rebuilt for Node.js.
+              From entity/field system to GraphQL, from admin UI to Docker deployment — everything included.
             </p>
           </div>
 
@@ -164,7 +166,7 @@ function App() {
             <span className="section-label">See it in action</span>
             <h2 className="section-title">Define once, build everything</h2>
             <p className="section-subtitle">
-              A JSON content type definition gives you entities, fields, validation, API endpoints, and admin UI.
+              Drupal's entity/field system in Node.js. A JSON content type definition gives you entities, fields, validation, REST + GraphQL endpoints, and admin UI.
             </p>
           </div>
 
