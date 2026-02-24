@@ -113,7 +113,7 @@ function App() {
               <h3 className="feature-group-title purple">API &amp; Integration</h3>
               <ul className="feature-list">
                 <li><strong>Auto-Generated REST API</strong> — Full CRUD for every entity type, 230+ endpoints</li>
-                <li><strong>GraphQL</strong> — Dynamic schema generation with queries, mutations, introspection</li>
+                <li><strong>GraphQL</strong> — Dynamic schema from entity types with queries, mutations, and playground</li>
                 <li><strong>Webhooks</strong> — HTTP callbacks with HMAC signing for entity lifecycle events</li>
                 <li><strong>JSON:API</strong> — Optional JSON:API 1.0 output format via Accept header</li>
                 <li><strong>OpenAPI/Swagger</strong> — Auto-generated API docs at /api/docs</li>
