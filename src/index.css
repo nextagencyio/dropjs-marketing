@@ -26,25 +26,25 @@ html {
   --text-secondary: #9ca3b8;
   --text-muted: #6b7394;
 
-  --accent-cyan: #00d4ff;
-  --accent-cyan-dim: rgba(0, 212, 255, 0.15);
-  --accent-cyan-glow: rgba(0, 212, 255, 0.3);
-  --accent-purple: #8b5cf6;
-  --accent-purple-dim: rgba(139, 92, 246, 0.15);
+  --accent-cyan: #1d9ffc;
+  --accent-cyan-dim: rgba(29, 159, 252, 0.15);
+  --accent-cyan-glow: rgba(29, 159, 252, 0.3);
+  --accent-purple: #a549ec;
+  --accent-purple-dim: rgba(165, 73, 236, 0.15);
   --accent-green: #34d399;
   --accent-orange: #f59e0b;
-  --accent-pink: #ec4899;
+  --accent-pink: #d848d5;
 
   /* Syntax highlighting */
-  --syn-keyword: #c792ea;
+  --syn-keyword: #a549ec;
   --syn-string: #c3e88d;
   --syn-number: #f78c6c;
-  --syn-property: #82aaff;
-  --syn-type: #ffcb6b;
+  --syn-property: #6da3fb;
+  --syn-type: #1d9ffc;
   --syn-comment: #546e7a;
-  --syn-punctuation: #89ddff;
-  --syn-function: #82aaff;
-  --syn-key: #f07178;
+  --syn-punctuation: #6da3fb;
+  --syn-function: #6da3fb;
+  --syn-key: #d848d5;
   --syn-value-str: #c3e88d;
 
   /* Typography */
@@ -88,7 +88,7 @@ a {
 }
 
 a:hover {
-  color: #4de4ff;
+  color: #4db8ff;
 }
 
 img {

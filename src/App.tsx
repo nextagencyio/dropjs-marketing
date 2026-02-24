@@ -31,8 +31,8 @@ function App() {
             <span className="gradient-text">the AI era</span>
           </h1>
           <p className="hero-subtitle">
-            Define content types in JSON, get a full REST API instantly.
-            Built on Node.js with Drupal's best ideas, designed for AI-assisted development.
+            Define content types in JSON. Get a full REST API and GraphQL endpoint instantly.
+            150+ endpoints, 61 admin pages, and 499 passing tests — built on Node.js with Drupal's proven architecture.
           </p>
           <div className="hero-buttons">
             <a href="#quickstart" className="btn btn-primary">
@@ -56,6 +56,34 @@ function App() {
         </div>
       </section>
 
+      {/* Stats Bar */}
+      <section className="stats-bar">
+        <div className="container">
+          <div className="stats-grid">
+            <div className="stat-item">
+              <span className="stat-number">18</span>
+              <span className="stat-label">Field Types</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">150+</span>
+              <span className="stat-label">API Endpoints</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">61</span>
+              <span className="stat-label">Admin Pages</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">499</span>
+              <span className="stat-label">Passing Tests</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">42</span>
+              <span className="stat-label">API Handlers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="features" id="features">
         <div className="container">
@@ -63,135 +91,67 @@ function App() {
             <span className="section-label">Features</span>
             <h2 className="section-title">Everything you need to build content-driven apps</h2>
             <p className="section-subtitle">
-              A complete CMS framework with an entity/field system, auto-generated APIs, and first-class AI support.
+              From content modeling to GraphQL, from admin UI to Docker deployment — everything included out of the box.
             </p>
           </div>
 
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon cyan">{'{}'}</div>
-              <h3>Entity/Field System</h3>
-              <p>
-                Define content types with configurable fields in simple JSON.
-                12 built-in field types including text, number, reference, file, and more.
-              </p>
+          <div className="feature-groups">
+            <div className="feature-group">
+              <h3 className="feature-group-title cyan">Content Management</h3>
+              <ul className="feature-list">
+                <li><strong>Entity/Field System</strong> — 18 field types with configurable content types in JSON</li>
+                <li><strong>Taxonomy</strong> — Vocabularies with hierarchical terms, tree API, drag-to-reorder</li>
+                <li><strong>Revision History</strong> — Full versioning with list, load, revert, and diff</li>
+                <li><strong>Comments</strong> — Threaded commenting with Drupal-style thread ordering</li>
+                <li><strong>Content Workflow</strong> — Moderation states: draft, review, published, archived</li>
+              </ul>
             </div>
 
-            <div className="feature-card">
-              <div className="feature-icon purple">
-                <span>DB</span>
-              </div>
-              <h3>Database Agnostic</h3>
-              <p>
-                SQLite for development, MySQL or PostgreSQL for production.
-                Switch databases without changing a line of application code.
-              </p>
+            <div className="feature-group">
+              <h3 className="feature-group-title purple">API &amp; Integration</h3>
+              <ul className="feature-list">
+                <li><strong>Auto-Generated REST API</strong> — Full CRUD for every entity type, 150+ endpoints</li>
+                <li><strong>GraphQL</strong> — Dynamic schema generation with queries, mutations, introspection</li>
+                <li><strong>Webhooks</strong> — HTTP callbacks with HMAC signing for entity lifecycle events</li>
+                <li><strong>JSON:API</strong> — Optional JSON:API 1.0 output format via Accept header</li>
+                <li><strong>OpenAPI/Swagger</strong> — Auto-generated API docs at /api/docs</li>
+                <li><strong>Batch API</strong> — Execute multiple operations in a single request</li>
+              </ul>
             </div>
 
-            <div className="feature-card">
-              <div className="feature-icon green">/</div>
-              <h3>Auto-Generated API</h3>
-              <p>
-                Every entity type automatically gets full REST endpoints --
-                list, get, create, update, and delete -- with zero configuration.
-              </p>
+            <div className="feature-group">
+              <h3 className="feature-group-title pink">Admin &amp; UI</h3>
+              <ul className="feature-list">
+                <li><strong>Admin UI</strong> — 61 pages built with Next.js 15 + Tailwind for content, structure, config</li>
+                <li><strong>Layout Builder</strong> — Configurable page layouts with sections and 5 layout types</li>
+                <li><strong>Views System</strong> — Drupal Views-inspired list builder with filters, sorts, pagination</li>
+                <li><strong>Media Library</strong> — File uploads with image styles (thumbnail, medium, large)</li>
+                <li><strong>Menu System</strong> — Hierarchical navigation menus with drag-and-drop ordering</li>
+              </ul>
             </div>
 
-            <div className="feature-card">
-              <div className="feature-icon orange">
-                <span>&rarr;</span>
-              </div>
-              <h3>Drupal Migration</h3>
-              <p>
-                Drupal-compatible multi-table storage means seamless migration.
-                Analyze, generate schemas, and migrate content with a single CLI command.
-              </p>
+            <div className="feature-group">
+              <h3 className="feature-group-title green">Developer Experience</h3>
+              <ul className="feature-list">
+                <li><strong>Database Agnostic</strong> — SQLite for dev, MySQL/PostgreSQL for production</li>
+                <li><strong>AI-Native</strong> — Every API surface designed to be discoverable by AI coding agents</li>
+                <li><strong>18 Field Types</strong> — string, text, integer, float, boolean, email, date, link, file, image, color, and more</li>
+                <li><strong>Drupal Migration</strong> — Analyze, generate schemas, and migrate content with one CLI command</li>
+                <li><strong>Docker Ready</strong> — Multi-stage Dockerfile and docker-compose for production deployment</li>
+                <li><strong>Event System</strong> — Async event bus with priority-ordered hooks</li>
+              </ul>
             </div>
 
-            <div className="feature-card">
-              <div className="feature-icon pink">AI</div>
-              <h3>AI-Native Development</h3>
-              <p>
-                Every API surface designed to be discoverable and operable by AI coding agents.
-                Built for the era of AI-assisted development.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon cyan">
-                <span>&#x1f512;</span>
-              </div>
-              <h3>Auth &amp; Permissions</h3>
-              <p>
-                Role-based access control, session management, password reset,
-                and first-user auto-admin. Secure by default, extensible by design.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon purple">
-                <span>&#x2699;</span>
-              </div>
-              <h3>Admin UI</h3>
-              <p>
-                Built-in React admin panel for managing content, content types,
-                taxonomy, users, and roles — no custom code required.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon green">
-                <span>&#x21c4;</span>
-              </div>
-              <h3>Webhooks</h3>
-              <p>
-                Register HTTP callbacks for entity lifecycle events.
-                Get notified on create, update, and delete via your own endpoints.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon orange">
-                <span>&#x26a1;</span>
-              </div>
-              <h3>Event System</h3>
-              <p>
-                Async event bus with priority-ordered hooks. React to presave, insert,
-                update, delete, and query events across all entity types.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon cyan">
-                <span>&#x25b6;</span>
-              </div>
-              <h3>Taxonomy System</h3>
-              <p>
-                Vocabularies with hierarchical terms, tree API, content counts,
-                and drag-to-reorder — all managed from the admin UI or REST API.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon purple">
-                <span>&#x21ba;</span>
-              </div>
-              <h3>Revision History</h3>
-              <p>
-                Built-in content versioning. List, load, revert, and diff between
-                revisions — every save is tracked automatically.
-              </p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon green">
-                <span>&#x25a3;</span>
-              </div>
-              <h3>File Uploads</h3>
-              <p>
-                Upload API with media library and auto-generated image styles —
-                thumbnail, medium, and large — powered by sharp.
-              </p>
+            <div className="feature-group">
+              <h3 className="feature-group-title orange">Enterprise</h3>
+              <ul className="feature-list">
+                <li><strong>Auth &amp; Permissions</strong> — RBAC with 21 permissions, sessions, password reset, CSRF</li>
+                <li><strong>Multilingual</strong> — 16 default languages with translation CRUD and language negotiation</li>
+                <li><strong>Search</strong> — FTS5 full-text search with porter stemming and auto-indexing</li>
+                <li><strong>Scheduled Publishing</strong> — Time-based content state transitions with cron</li>
+                <li><strong>Content Locking</strong> — Pessimistic edit locking with TTL, renewal, admin break</li>
+                <li><strong>Config Sync</strong> — Import/export all configuration as JSON with diff</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -281,6 +241,7 @@ function App() {
 {'\n'}<span className="syn-comment">// PATCH  /api/node/article/:id</span>
 {'\n'}<span className="syn-comment">// DELETE /api/node/article/:id</span>
 {'\n'}<span className="syn-comment">// ?sort=-created&amp;include=field_tags</span>
+{'\n'}<span className="syn-comment">// GraphQL also at /api/graphql</span>
               </pre>
             </div>
           </div>
@@ -378,6 +339,9 @@ function App() {
               </div>
               <div className="terminal-line">
                 <span className="output">API at http://localhost:3000/api</span>
+              </div>
+              <div className="terminal-line">
+                <span className="output">Swagger docs at http://localhost:3000/api/docs</span>
               </div>
             </div>
           </div>
