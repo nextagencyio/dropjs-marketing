@@ -24,7 +24,7 @@ function App() {
       <section className="hero">
         <div className="container">
           <div className="hero-badge">
-            Open Source &middot; ISC License
+            Open Source &middot; MIT License
           </div>
           <h1>
             Drupal's power,{' '}
@@ -400,7 +400,7 @@ function App() {
             </li>
           </ul>
           <div className="footer-note">
-            ISC License &middot; drop.js is open source software
+            MIT License &middot; drop.js is open source software
           </div>
         </div>
       </footer>
