@@ -145,7 +145,6 @@ function App() {
                 <li><strong>Drupal Migration</strong> — Analyze, generate schemas, and migrate content via CLI</li>
                 <li><strong>Event System</strong> — Async event bus with priority-ordered hooks</li>
                 <li><strong>Validation</strong> — Server-side field constraints: required, max_length, pattern, and custom validators</li>
-                <li><strong>Drupal 11 Compatible</strong> — Byte-identical database schema, export to Drupal installations</li>
               </ul>
             </div>
 
@@ -162,6 +161,15 @@ function App() {
                 <li><strong>Queue System</strong> — Persistent task queue with claim, release, and background processing</li>
               </ul>
             </div>
+          </div>
+
+          <div className="compat-callout">
+            <h3>100% Drupal-Compatible Database</h3>
+            <p>
+              drop.js generates a byte-identical database schema to Drupal 11.
+              Export your SQLite database and import it directly into a Drupal installation — all content,
+              fields, taxonomy, and configuration transfer seamlessly. Migrate from Drupal or back to it at any time.
+            </p>
           </div>
         </div>
       </section>
