@@ -33,7 +33,7 @@ function App() {
           <p className="hero-subtitle">
             A headless Node.js port of Drupal's entity/field architecture.
             Define content types in JSON, get a full REST API and GraphQL endpoint instantly.
-            150+ endpoints, 61 admin pages, and 499 passing tests.
+            220+ endpoints, 60 admin pages, and 500+ passing tests.
           </p>
           <div className="hero-buttons">
             <a href="#quickstart" className="btn btn-primary">
@@ -66,15 +66,15 @@ function App() {
               <span className="stat-label">Field Types</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">230+</span>
+              <span className="stat-number">220+</span>
               <span className="stat-label">API Endpoints</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">57</span>
+              <span className="stat-number">60</span>
               <span className="stat-label">Admin Pages</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">499</span>
+              <span className="stat-number">500+</span>
               <span className="stat-label">Passing Tests</span>
             </div>
             <div className="stat-item">
@@ -106,13 +106,15 @@ function App() {
                 <li><strong>Revision History</strong> — Full versioning with list, load, revert, and diff</li>
                 <li><strong>Comments</strong> — Threaded commenting with Drupal-style thread ordering</li>
                 <li><strong>Content Workflow</strong> — Moderation states: draft, review, published, archived</li>
+                <li><strong>Paragraphs</strong> — Structured content components with parent-child relationships</li>
+                <li><strong>URL Aliases</strong> — Human-readable paths with automatic pattern-based generation</li>
               </ul>
             </div>
 
             <div className="feature-group">
               <h3 className="feature-group-title purple">API &amp; Integration</h3>
               <ul className="feature-list">
-                <li><strong>Auto-Generated REST API</strong> — Full CRUD for every entity type, 230+ endpoints</li>
+                <li><strong>Auto-Generated REST API</strong> — Full CRUD for every entity type, 220+ endpoints</li>
                 <li><strong>GraphQL</strong> — Dynamic schema from entity types with queries, mutations, and playground</li>
                 <li><strong>Webhooks</strong> — HTTP callbacks with HMAC signing for entity lifecycle events</li>
                 <li><strong>JSON:API</strong> — Optional JSON:API 1.0 output format via Accept header</li>
@@ -124,11 +126,13 @@ function App() {
             <div className="feature-group">
               <h3 className="feature-group-title pink">Admin &amp; UI</h3>
               <ul className="feature-list">
-                <li><strong>Admin UI</strong> — 57 pages built with Next.js 15 + Tailwind for content, structure, config</li>
+                <li><strong>Admin UI</strong> — 60 pages built with Next.js 15 + Tailwind for content, structure, config</li>
                 <li><strong>Layout Builder</strong> — Configurable page layouts with sections and 5 layout types</li>
                 <li><strong>Views System</strong> — Drupal Views-inspired list builder with filters, sorts, pagination</li>
                 <li><strong>Media Library</strong> — File uploads with image styles (thumbnail, medium, large)</li>
                 <li><strong>Menu System</strong> — Hierarchical navigation menus with weight-based ordering</li>
+                <li><strong>Block System</strong> — 8 default regions with visibility conditions and placement management</li>
+                <li><strong>Content Preview</strong> — Draft preview with token-based access and TTL expiry</li>
               </ul>
             </div>
 
@@ -140,6 +144,8 @@ function App() {
                 <li><strong>18 Field Types</strong> — string, text, integer, float, boolean, email, date, link, file, image, color, and more</li>
                 <li><strong>Drupal Migration</strong> — Analyze, generate schemas, and migrate content via CLI</li>
                 <li><strong>Event System</strong> — Async event bus with priority-ordered hooks</li>
+                <li><strong>Validation</strong> — Server-side field constraints: required, max_length, pattern, and custom validators</li>
+                <li><strong>Drupal 11 Compatible</strong> — Byte-identical database schema, export to Drupal installations</li>
               </ul>
             </div>
 
@@ -152,6 +158,8 @@ function App() {
                 <li><strong>Scheduled Publishing</strong> — Time-based content state transitions with cron</li>
                 <li><strong>Content Locking</strong> — Pessimistic edit locking with TTL, renewal, admin break</li>
                 <li><strong>Config Sync</strong> — Import/export all configuration as JSON with diff</li>
+                <li><strong>Rate Limiting</strong> — Per-route rate limits for auth, mutations, and read endpoints</li>
+                <li><strong>Queue System</strong> — Persistent task queue with claim, release, and background processing</li>
               </ul>
             </div>
           </div>
