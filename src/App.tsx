@@ -178,87 +178,67 @@ function App() {
       <section className="code-example" id="code">
         <div className="container">
           <div className="section-header">
-            <span className="section-label">See it in action</span>
-            <h2 className="section-title">Define once, build everything</h2>
+            <span className="section-label">Content in, APIs out</span>
+            <h2 className="section-title">Manage in the admin UI, consume over APIs</h2>
             <p className="section-subtitle">
-              Drupal's entity/field system in Node.js. A JSON content type definition gives you entities, fields, validation, REST + GraphQL endpoints, and admin UI.
+              Create and manage content through the admin interface — the same entity/field/bundle model as Drupal.
+              Consume it headlessly via REST, GraphQL, or JSON:API.
             </p>
           </div>
 
           <div className="code-panels">
-            {/* Left: JSON definition */}
             <div className="code-panel">
               <div className="code-panel-header">
                 <span className="code-dot red" />
                 <span className="code-dot yellow" />
                 <span className="code-dot green" />
-                <span className="code-panel-title">article.content-type.json</span>
+                <span className="code-panel-title">GET /api/node/article/1</span>
               </div>
               <pre>
 {`{`}
-{'\n  '}<span className="syn-key">"entity_type"</span><span className="syn-punctuation">:</span> <span className="syn-string">"node"</span><span className="syn-punctuation">,</span>
-{'\n  '}<span className="syn-key">"bundle"</span><span className="syn-punctuation">:</span> <span className="syn-string">"article"</span><span className="syn-punctuation">,</span>
-{'\n  '}<span className="syn-key">"label"</span><span className="syn-punctuation">:</span> <span className="syn-string">"Article"</span><span className="syn-punctuation">,</span>
-{'\n  '}<span className="syn-key">"fields"</span><span className="syn-punctuation">:</span> {'{'}
-{'\n    '}<span className="syn-key">"title"</span><span className="syn-punctuation">:</span> {'{'}
-{'\n      '}<span className="syn-key">"type"</span><span className="syn-punctuation">:</span> <span className="syn-string">"string"</span><span className="syn-punctuation">,</span>
-{'\n      '}<span className="syn-key">"required"</span><span className="syn-punctuation">:</span> <span className="syn-number">true</span><span className="syn-punctuation">,</span>
-{'\n      '}<span className="syn-key">"max_length"</span><span className="syn-punctuation">:</span> <span className="syn-number">255</span>
-{'\n    '}{'}'}<span className="syn-punctuation">,</span>
-{'\n    '}<span className="syn-key">"body"</span><span className="syn-punctuation">:</span> {'{'}
-{'\n      '}<span className="syn-key">"type"</span><span className="syn-punctuation">:</span> <span className="syn-string">"text_long"</span><span className="syn-punctuation">,</span>
-{'\n      '}<span className="syn-key">"label"</span><span className="syn-punctuation">:</span> <span className="syn-string">"Body"</span>
-{'\n    '}{'}'}<span className="syn-punctuation">,</span>
-{'\n    '}<span className="syn-key">"field_tags"</span><span className="syn-punctuation">:</span> {'{'}
-{'\n      '}<span className="syn-key">"type"</span><span className="syn-punctuation">:</span> <span className="syn-string">"entity_reference"</span><span className="syn-punctuation">,</span>
-{'\n      '}<span className="syn-key">"label"</span><span className="syn-punctuation">:</span> <span className="syn-string">"Tags"</span><span className="syn-punctuation">,</span>
-{'\n      '}<span className="syn-key">"cardinality"</span><span className="syn-punctuation">:</span> <span className="syn-number">-1</span>
-{'\n    '}{'}'}<span className="syn-punctuation">,</span>
-{'\n    '}<span className="syn-key">"field_featured"</span><span className="syn-punctuation">:</span> {'{'}
-{'\n      '}<span className="syn-key">"type"</span><span className="syn-punctuation">:</span> <span className="syn-string">"boolean"</span><span className="syn-punctuation">,</span>
-{'\n      '}<span className="syn-key">"label"</span><span className="syn-punctuation">:</span> <span className="syn-string">"Featured"</span>
-{'\n    '}{'}'}
+{'\n  '}<span className="syn-key">"data"</span><span className="syn-punctuation">:</span> {'{'}
+{'\n    '}<span className="syn-key">"nid"</span><span className="syn-punctuation">:</span> <span className="syn-number">1</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"type"</span><span className="syn-punctuation">:</span> <span className="syn-string">"article"</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"title"</span><span className="syn-punctuation">:</span> <span className="syn-string">"Hello World"</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"body"</span><span className="syn-punctuation">:</span> {'{'} <span className="syn-key">"value"</span><span className="syn-punctuation">:</span> <span className="syn-string">"My first post."</span> {'}'}<span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"field_tags"</span><span className="syn-punctuation">:</span> <span className="syn-punctuation">[</span><span className="syn-number">3</span><span className="syn-punctuation">,</span> <span className="syn-number">7</span><span className="syn-punctuation">]</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"field_image"</span><span className="syn-punctuation">:</span> <span className="syn-string">"/files/hero.jpg"</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"status"</span><span className="syn-punctuation">:</span> <span className="syn-number">1</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"uid"</span><span className="syn-punctuation">:</span> <span className="syn-number">1</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"created"</span><span className="syn-punctuation">:</span> <span className="syn-number">1709856000</span><span className="syn-punctuation">,</span>
+{'\n    '}<span className="syn-key">"changed"</span><span className="syn-punctuation">:</span> <span className="syn-number">1709856000</span>
 {'\n  '}{'}'}
 {'\n'}{'}'}
               </pre>
             </div>
 
-            {/* Right: TypeScript usage */}
             <div className="code-panel">
               <div className="code-panel-header">
                 <span className="code-dot red" />
                 <span className="code-dot yellow" />
                 <span className="code-dot green" />
-                <span className="code-panel-title">app.ts</span>
+                <span className="code-panel-title">API Endpoints</span>
               </div>
               <pre>
-<span className="syn-keyword">import</span> {'{'} <span className="syn-type">Entity</span> {'}'} <span className="syn-keyword">from</span> <span className="syn-string">'dropjs'</span><span className="syn-punctuation">;</span>
+<span className="syn-comment">REST</span>
+{'\n'}<span className="syn-string">GET    /api/node/article</span>
+{'\n'}<span className="syn-string">GET    /api/node/article/:id</span>
+{'\n'}<span className="syn-string">POST   /api/node/article</span>
+{'\n'}<span className="syn-string">PATCH  /api/node/article/:id</span>
+{'\n'}<span className="syn-string">DELETE /api/node/article/:id</span>
 {'\n'}
-{'\n'}<span className="syn-comment">// Create an article</span>
-{'\n'}<span className="syn-keyword">const</span> article <span className="syn-operator">=</span> <span className="syn-keyword">await</span> <span className="syn-type">Entity</span>.<span className="syn-function">create</span><span className="syn-punctuation">(</span>
-{'\n  '}<span className="syn-string">'node'</span><span className="syn-punctuation">,</span> <span className="syn-string">'article'</span><span className="syn-punctuation">,</span> {'{'}
-{'\n    '}title<span className="syn-punctuation">:</span> <span className="syn-string">'Hello World'</span><span className="syn-punctuation">,</span>
-{'\n    '}body<span className="syn-punctuation">:</span> {'{'} value<span className="syn-punctuation">:</span> <span className="syn-string">'My first post.'</span> {'}'}<span className="syn-punctuation">,</span>
-{'\n    '}status<span className="syn-punctuation">:</span> <span className="syn-number">true</span>
-{'\n  '}{'}'}
-{'\n'}<span className="syn-punctuation">)</span><span className="syn-punctuation">;</span>
+{'\n'}<span className="syn-comment">Query</span>
+{'\n'}<span className="syn-string">GET /api/node/article?sort=-created</span>
+{'\n'}<span className="syn-string">GET /api/node/article?status=1&amp;limit=10</span>
 {'\n'}
-{'\n'}<span className="syn-comment">// Query with conditions</span>
-{'\n'}<span className="syn-keyword">const</span> ids <span className="syn-operator">=</span> <span className="syn-keyword">await</span> <span className="syn-type">Entity</span>.<span className="syn-function">query</span><span className="syn-punctuation">(</span><span className="syn-string">'node'</span><span className="syn-punctuation">)</span>
-{'\n  '}.<span className="syn-function">condition</span><span className="syn-punctuation">(</span><span className="syn-string">'type'</span><span className="syn-punctuation">,</span> <span className="syn-string">'article'</span><span className="syn-punctuation">)</span>
-{'\n  '}.<span className="syn-function">condition</span><span className="syn-punctuation">(</span><span className="syn-string">'status'</span><span className="syn-punctuation">,</span> <span className="syn-number">true</span><span className="syn-punctuation">)</span>
-{'\n  '}.<span className="syn-function">sort</span><span className="syn-punctuation">(</span><span className="syn-string">'created'</span><span className="syn-punctuation">,</span> <span className="syn-string">'DESC'</span><span className="syn-punctuation">)</span>
-{'\n  '}.<span className="syn-function">range</span><span className="syn-punctuation">(</span><span className="syn-number">0</span><span className="syn-punctuation">,</span> <span className="syn-number">10</span><span className="syn-punctuation">)</span>
-{'\n  '}.<span className="syn-function">execute</span><span className="syn-punctuation">()</span><span className="syn-punctuation">;</span>
+{'\n'}<span className="syn-comment">GraphQL</span>
+{'\n'}<span className="syn-string">POST /api/graphql</span>
 {'\n'}
-{'\n'}<span className="syn-comment">// REST API auto-generated</span>
-{'\n'}<span className="syn-comment">// GET    /api/node/article</span>
-{'\n'}<span className="syn-comment">// GET    /api/node/article/:id</span>
-{'\n'}<span className="syn-comment">// POST   /api/node/article</span>
-{'\n'}<span className="syn-comment">// PATCH  /api/node/article/:id</span>
-{'\n'}<span className="syn-comment">// DELETE /api/node/article/:id</span>
-{'\n'}<span className="syn-comment">// ?sort=-created&amp;include=field_tags</span>
-{'\n'}<span className="syn-comment">// GraphQL also at /api/graphql</span>
+{'\n'}<span className="syn-comment">JSON:API</span>
+{'\n'}<span className="syn-string">Accept: application/vnd.api+json</span>
+{'\n'}
+{'\n'}<span className="syn-comment">Swagger</span>
+{'\n'}<span className="syn-string">GET /api/docs</span>
               </pre>
             </div>
           </div>
