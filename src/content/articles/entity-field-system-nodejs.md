@@ -1,3 +1,11 @@
+---
+title: "Drupal's Entity/Field System in Node.js: How drop.js Works"
+excerpt: "A deep dive into how drop.js implements Drupal's entity/field architecture natively in Node.js."
+category: "Drupal"
+readTime: "10 min read"
+date: "April 2026"
+---
+
 Drupal's content modeling system is the best in the CMS world. That is not marketing. It is a factual statement backed by 20 years of iteration on entity types, field types, entity references, paragraphs, taxonomy, revisions, and content workflows. No other CMS has this depth of structured content modeling.
 
 The problem is that the system is locked inside a PHP application. drop.js unlocks it.

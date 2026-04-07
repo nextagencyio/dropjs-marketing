@@ -1,0 +1,181 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'drop.js — Open Source Headless Node.js CMS Framework',
+  description = 'drop.js is an open-source headless Node.js CMS framework with Drupal\'s proven architecture. Define content types in JSON, get REST API, GraphQL, and JSON:API instantly. 220+ endpoints, 18 field types, admin UI included.',
+  ogImage = '/og-image.png',
+  canonical,
+} = Astro.props;
+
+const isBlog = Astro.url.pathname.startsWith('/blog');
+const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).href;
+const ogImageUrl = new URL(ogImage, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="headless cms, nodejs cms, open source cms, drupal alternative, typescript cms, graphql cms, rest api cms, headless cms nodejs, content management framework" />
+    <meta name="theme-color" content="#0a0e1a" />
+    <meta name="author" content="NextAgency" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="drop.js" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "drop.js",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Cross-platform",
+      "description": "A headless Node.js CMS framework inspired by Drupal. Define content types in JSON, get a full REST API, GraphQL endpoint, and admin UI instantly.",
+      "url": "https://dropjs.dev",
+      "downloadUrl": "https://www.npmjs.com/package/dropjs",
+      "license": "https://opensource.org/licenses/MIT",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Organization", "name": "NextAgency", "url": "https://nextagency.io" },
+      "featureList": [
+        "220+ REST API endpoints", "GraphQL with playground", "JSON:API support",
+        "60-page admin UI", "18 field types", "Drupal-compatible database",
+        "Content workflow and moderation", "Full-text search", "RBAC with 19 permissions"
+      ]
+    })} />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <a href="/" class="nav-logo">
+          <img src="/logo-transparent.png" alt="drop.js" class="nav-logo-img" />
+        </a>
+        <ul class="nav-links">
+          {isBlog ? (
+            <>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="https://github.com/nextagencyio/dropjs#readme" target="_blank" rel="noopener noreferrer">Docs</a></li>
+              <li><a href="https://github.com/nextagencyio/dropjs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </>
+          ) : (
+            <>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#code">Code</a></li>
+              <li><a href="#architecture">Architecture</a></li>
+              <li><a href="#quickstart">Quick Start</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="https://github.com/nextagencyio/dropjs#readme" target="_blank" rel="noopener noreferrer">Docs</a></li>
+              <li><a href="https://github.com/nextagencyio/dropjs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </>
+          )}
+        </ul>
+      </div>
+    </nav>
+
+    <slot />
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-brand">
+          Built by <a href="https://github.com/nextagencyio" target="_blank" rel="noopener noreferrer">nextagencyio</a>
+        </div>
+        <ul class="footer-links">
+          <li><a href="https://github.com/nextagencyio/dropjs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://github.com/nextagencyio/dropjs/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+        <div class="footer-note">MIT License &middot; drop.js is open source software</div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  /* === CSS Reset === */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+  :root {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #0f1424;
+    --bg-tertiary: #141a2e;
+    --bg-card: #161d33;
+    --bg-code: #0d1117;
+    --text-primary: #e8eaf0;
+    --text-secondary: #9ca3b8;
+    --text-muted: #6b7394;
+    --accent-cyan: #1d9ffc;
+    --accent-cyan-dim: rgba(29, 159, 252, 0.15);
+    --accent-cyan-glow: rgba(29, 159, 252, 0.3);
+    --accent-purple: #a549ec;
+    --accent-purple-dim: rgba(165, 73, 236, 0.15);
+    --accent-green: #34d399;
+    --accent-orange: #f59e0b;
+    --accent-pink: #d848d5;
+    --syn-keyword: #a549ec;
+    --syn-string: #c3e88d;
+    --syn-number: #f78c6c;
+    --syn-property: #6da3fb;
+    --syn-type: #1d9ffc;
+    --syn-comment: #546e7a;
+    --syn-punctuation: #6da3fb;
+    --syn-function: #6da3fb;
+    --syn-key: #d848d5;
+    --syn-value-str: #c3e88d;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Monaco', monospace;
+    --section-padding: 6rem 0;
+    --container-max: 1200px;
+    --container-padding: 0 1.5rem;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+
+  a { color: var(--accent-cyan); text-decoration: none; transition: color var(--transition-fast); }
+  a:hover { color: #4db8ff; }
+  img { max-width: 100%; display: block; }
+  code { font-family: var(--font-mono); }
+
+  .container { max-width: var(--container-max); margin: 0 auto; padding: var(--container-padding); }
+
+  @media (max-width: 768px) { :root { --section-padding: 4rem 0; } }
+  @media (max-width: 480px) { :root { --section-padding: 3rem 0; } }
+</style>

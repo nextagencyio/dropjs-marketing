@@ -1,3 +1,11 @@
+---
+title: "Using drop.js with Next.js: A Complete Tutorial"
+excerpt: "Step-by-step guide to building a content-driven Next.js app with drop.js as the headless backend."
+category: "Tutorials"
+readTime: "12 min read"
+date: "April 2026"
+---
+
 This tutorial walks through building a blog with drop.js as the headless CMS backend and Next.js as the frontend. By the end, you will have a working content API serving blog posts to a Next.js App Router application.
 
 No shortcuts or pseudocode. Every command and code block is complete and runnable.

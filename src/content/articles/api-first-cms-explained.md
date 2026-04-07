@@ -1,3 +1,11 @@
+---
+title: "What Is an API-First CMS? (And Why It Matters)"
+excerpt: "API-first means your content is available everywhere. Here is what that looks like in practice."
+category: "Concepts"
+readTime: "8 min read"
+date: "April 2026"
+---
+
 The term "API-first" gets thrown around a lot in CMS marketing. Most of the time it's used incorrectly. There's a meaningful distinction between a CMS that happens to have an API and one that was designed around the API from day one.
 
 Understanding this distinction matters when you're choosing infrastructure for a project that needs to serve content to more than one consumer.

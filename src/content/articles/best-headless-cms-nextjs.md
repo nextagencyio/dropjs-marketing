@@ -1,3 +1,11 @@
+---
+title: "Best Headless CMS for Next.js in 2026"
+excerpt: "A practical comparison of headless CMS options for Next.js projects with actual integration code."
+category: "Guides"
+readTime: "10 min read"
+date: "April 2026"
+---
+
 Choosing a headless CMS for Next.js means picking the system your team will live with for years. The wrong choice creates migration debt. The right one disappears into the background and lets you ship.
 
 This is a practical comparison of five headless CMS options that work well with Next.js. No "top 50" listicle. Just the ones worth your time, with actual code showing how each one integrates with the App Router.

@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+
+// Get related articles: same category first, then others, excluding the current article
+const allArticles = await getCollection('articles');
+const sameCategory = allArticles.filter(
+  (a) => a.data.category === article.data.category && a.id !== article.id
+);
+const otherCategory = allArticles.filter(
+  (a) => a.data.category !== article.data.category && a.id !== article.id
+);
+const relatedArticles = [...sameCategory, ...otherCategory].slice(0, 3);
+
+const canonicalUrl = new URL(`/blog/${article.id}`, Astro.site).href;
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": article.data.title,
+  "description": article.data.excerpt,
+  "datePublished": article.data.date,
+  "author": {
+    "@type": "Organization",
+    "name": "NextAgency",
+    "url": "https://nextagency.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "drop.js",
+    "url": "https://dropjs.dev",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dropjs.dev/logo-transparent.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  }
+};
+---
+
+<Layout
+  title={`${article.data.title} — drop.js`}
+  description={article.data.excerpt}
+  canonical={canonicalUrl}
+>
+  <main class="blog-page">
+    <div class="container">
+      <article>
+        <div class="blog-post-header">
+          <a href="/blog" class="blog-back-link">&larr; Back to Blog</a>
+          <span class="blog-card-category">{article.data.category}</span>
+          <h1 class="blog-post-title">{article.data.title}</h1>
+          <div class="blog-card-meta">
+            <span>{article.data.date}</span>
+            <span>&middot;</span>
+            <span>{article.data.readTime}</span>
+          </div>
+        </div>
+
+        <div class="blog-post-content">
+          <Content />
+        </div>
+      </article>
+
+      {relatedArticles.length > 0 && (
+        <div class="blog-related">
+          <h2 class="blog-related-title">Related Articles</h2>
+          <div class="blog-grid">
+            {relatedArticles.map((related) => (
+              <a href={`/blog/${related.id}`} class="blog-card">
+                <span class="blog-card-category">{related.data.category}</span>
+                <h3 class="blog-card-title">{related.data.title}</h3>
+                <p class="blog-card-excerpt">{related.data.excerpt}</p>
+                <div class="blog-card-meta">
+                  <span>{related.data.date}</span>
+                  <span>&middot;</span>
+                  <span>{related.data.readTime}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </main>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+</Layout>

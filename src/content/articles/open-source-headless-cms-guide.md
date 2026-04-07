@@ -1,3 +1,11 @@
+---
+title: "Open Source Headless CMS: The Complete 2026 Guide"
+excerpt: "A genuine comparison of open source headless CMS options -- Strapi, Payload, KeystoneJS, Directus, Ghost, and drop.js."
+category: "Guides"
+readTime: "12 min read"
+date: "April 2026"
+---
+
 If you're evaluating open-source headless CMS platforms, you've probably noticed the landscape is crowded. Every project claims to be developer-friendly, API-first, and the future of content management. This guide cuts through the positioning and gives you a practical comparison of six real options.
 
 All of these are open source, self-hosted, and free to run. The trade-offs are in architecture, developer experience, maturity, and ecosystem.

@@ -1,3 +1,11 @@
+---
+title: "What Is a Headless CMS? A Developer's Guide"
+excerpt: "A practical guide to headless CMS architecture -- what it is, how it works, and when it makes sense. Written for developers, not marketers."
+category: "Concepts"
+readTime: "10 min read"
+date: "April 2026"
+---
+
 A headless CMS is a content management system that has no opinion about how your content gets displayed. It stores and manages content, exposes it through APIs, and gets out of the way. You build the frontend however you want.
 
 If you've worked with WordPress or Drupal, you know the traditional model: the CMS handles everything from content storage to HTML rendering. A headless CMS deliberately breaks that coupling.

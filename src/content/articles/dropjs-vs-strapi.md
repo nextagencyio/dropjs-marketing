@@ -1,3 +1,11 @@
+---
+title: "drop.js vs Strapi: Which Node.js CMS Should You Choose?"
+excerpt: "An honest technical comparison of drop.js and Strapi. Where each wins, where each falls short, and how to pick the right one."
+category: "Comparisons"
+readTime: "9 min read"
+date: "April 2026"
+---
+
 If you're evaluating headless CMS options for your next project, you've probably already looked at Strapi. It's the most popular open-source headless CMS for a reason: solid developer experience, big community, and a polished admin panel. But it's not the only option.
 
 This is an honest comparison between Strapi and drop.js -- where each one wins, where each one falls short, and which one makes sense for different types of projects.

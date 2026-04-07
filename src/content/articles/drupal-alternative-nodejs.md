@@ -1,3 +1,11 @@
+---
+title: "Drupal Alternative for Node.js Developers"
+excerpt: "Keep Drupal's proven architecture but run it on Node.js. That is exactly what drop.js does."
+category: "Drupal"
+readTime: "10 min read"
+date: "April 2026"
+---
+
 Drupal is one of the most capable content management systems ever built. The entity/field system is remarkably flexible. Taxonomy, revisions, content workflows, permissions -- Drupal solved these problems years before most headless CMS tools existed.
 
 But there are real reasons teams look for alternatives.

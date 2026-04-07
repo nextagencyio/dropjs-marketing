@@ -1,3 +1,11 @@
+---
+title: "Migrating from Drupal to Node.js with drop.js"
+excerpt: "drop.js is the only CMS that is database-compatible with Drupal 11. Here is how to migrate."
+category: "Drupal"
+readTime: "12 min read"
+date: "April 2026"
+---
+
 Drupal is a powerful CMS. It has an unmatched content modeling system, a mature entity/field architecture, and 20 years of battle-tested features. But running a Drupal site in 2026 means PHP, Composer dependency hell, Drush maintenance scripts, and a shrinking pool of developers who want to work with that stack.
 
 If you have been thinking about migrating your Drupal site to Node.js but dreading the prospect of rebuilding your content model from scratch, this guide is for you.

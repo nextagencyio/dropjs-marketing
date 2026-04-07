@@ -1,3 +1,11 @@
+---
+title: "What Is JAMstack? A Modern Architecture Explained"
+excerpt: "JAMstack separates your frontend from your backend. Here is what that means and how a headless CMS fits in."
+category: "Concepts"
+readTime: "8 min read"
+date: "April 2026"
+---
+
 JAMstack is an architecture pattern, not a specific technology. It stands for JavaScript, APIs, and Markup. The core idea: pre-render as much as possible, serve it from a CDN, and use APIs for dynamic functionality.
 
 The term was coined by Netlify's CEO Mathieu Billeau around 2015, but the pattern existed before the branding. Static site generators like Jekyll and Hugo were doing this for years — generating HTML at build time and deploying it to static hosting.

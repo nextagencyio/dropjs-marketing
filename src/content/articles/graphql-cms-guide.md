@@ -1,3 +1,11 @@
+---
+title: "GraphQL CMS: When and Why to Use GraphQL for Content"
+excerpt: "GraphQL is not always the right choice. Here is when it shines and when REST is simpler."
+category: "Guides"
+readTime: "8 min read"
+date: "April 2026"
+---
+
 GraphQL has become the default recommendation in CMS discussions. "Just use GraphQL" is the new "just use REST." But GraphQL isn't always the right choice for content management, and choosing it without understanding the trade-offs will cost you time.
 
 This guide covers when GraphQL actually solves problems for CMS-driven projects, when REST is simpler, and how the major open-source CMS platforms handle GraphQL.

@@ -1,3 +1,11 @@
+---
+title: "Headless CMS vs Traditional CMS: A Technical Comparison"
+excerpt: "When should you use a headless CMS and when is a traditional CMS the right call? An honest comparison with code examples."
+category: "Concepts"
+readTime: "8 min read"
+date: "April 2026"
+---
+
 The choice between headless and traditional CMS comes down to one question: do you want your CMS to control the frontend, or do you want to build it yourself? Both answers are valid. This is a breakdown of the real differences to help you decide.
 
 ## Architecture: Monolithic vs. Decoupled

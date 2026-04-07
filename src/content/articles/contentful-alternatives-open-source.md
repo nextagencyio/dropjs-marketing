@@ -1,3 +1,11 @@
+---
+title: "Contentful Alternatives: Open Source Options for 2026"
+excerpt: "Contentful gets expensive at scale. Here are the open source headless CMS alternatives with honest comparisons."
+category: "Comparisons"
+readTime: "9 min read"
+date: "April 2026"
+---
+
 Contentful is a good product. The API is clean, the content modeling is flexible, and the developer experience is polished. But at some point, most teams hit the same wall: pricing.
 
 The free tier caps you at 5 users and 1 million API calls per month. The Team plan jumps to $300/month. After that, you're in "contact sales" territory, which usually means four-figure monthly bills. For a headless CMS that stores your content, that adds up fast.

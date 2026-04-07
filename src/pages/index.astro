@@ -1,0 +1,930 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        Open Source &middot; MIT License
+      </div>
+      <h1>
+        Drupal's power,
+        <span class="gradient-text">headless on Node.js</span>
+      </h1>
+      <p class="hero-subtitle">
+        A headless Node.js port of Drupal's entity/field architecture.
+        Define content types in JSON, get a full REST API and GraphQL endpoint instantly.
+        220+ endpoints, 60 admin pages, and 500+ passing tests.
+      </p>
+      <div class="hero-buttons">
+        <a href="#quickstart" class="btn btn-primary">
+          Get Started
+        </a>
+        <a
+          href="https://github.com/nextagencyio/dropjs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+        >
+          View on GitHub
+        </a>
+      </div>
+      <div class="hero-install">
+        <code>
+          <span class="prompt">$</span>
+          <span class="cmd">npx create-drop-app my-site</span>
+        </code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">18</span>
+          <span class="stat-label">Field Types</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">220+</span>
+          <span class="stat-label">API Endpoints</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">60</span>
+          <span class="stat-label">Admin Pages</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Passing Tests</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">42</span>
+          <span class="stat-label">API Handlers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Features</span>
+        <h2 class="section-title">Everything you need to build content-driven apps</h2>
+        <p class="section-subtitle">
+          Drupal's proven content architecture, rebuilt for Node.js.
+          From entity/field system to GraphQL, admin UI and beyond — everything included.
+        </p>
+      </div>
+
+      <div class="feature-groups">
+        <div class="feature-group">
+          <h3 class="feature-group-title cyan">Content Management</h3>
+          <ul class="feature-list">
+            <li><strong>Entity/Field System</strong> — 18 field types with configurable content types in JSON</li>
+            <li><strong>Taxonomy</strong> — Vocabularies with hierarchical terms, tree API, weight-based reordering</li>
+            <li><strong>Revision History</strong> — Full versioning with list, load, revert, and diff</li>
+            <li><strong>Comments</strong> — Threaded commenting with Drupal-style thread ordering</li>
+            <li><strong>Content Workflow</strong> — Moderation states: draft, review, published, archived</li>
+            <li><strong>Paragraphs</strong> — Structured content components with parent-child relationships</li>
+            <li><strong>URL Aliases</strong> — Human-readable paths with automatic pattern-based generation</li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <h3 class="feature-group-title purple">API &amp; Integration</h3>
+          <ul class="feature-list">
+            <li><strong>Auto-Generated REST API</strong> — Full CRUD for every entity type, 220+ endpoints</li>
+            <li><strong>GraphQL</strong> — Dynamic schema from entity types with queries, mutations, and playground</li>
+            <li><strong>Webhooks</strong> — HTTP callbacks with HMAC signing for entity lifecycle events</li>
+            <li><strong>JSON:API</strong> — Optional JSON:API 1.0 output format via Accept header</li>
+            <li><strong>OpenAPI/Swagger</strong> — Auto-generated API docs at /api/docs</li>
+            <li><strong>Batch API</strong> — Execute multiple operations in a single request</li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <h3 class="feature-group-title pink">Admin &amp; UI</h3>
+          <ul class="feature-list">
+            <li><strong>Admin UI</strong> — 60 pages built with Next.js 15 + Tailwind for content, structure, config</li>
+            <li><strong>Layout Builder</strong> — Configurable page layouts with sections and 5 layout types</li>
+            <li><strong>Views System</strong> — Drupal Views-inspired list builder with filters, sorts, pagination</li>
+            <li><strong>Media Library</strong> — File uploads with image styles (thumbnail, medium, large)</li>
+            <li><strong>Menu System</strong> — Hierarchical navigation menus with weight-based ordering</li>
+            <li><strong>Block System</strong> — 8 default regions with visibility conditions and placement management</li>
+            <li><strong>Content Preview</strong> — Draft preview with token-based access and TTL expiry</li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <h3 class="feature-group-title green">Developer Experience</h3>
+          <ul class="feature-list">
+            <li><strong>Database Agnostic</strong> — SQLite for dev, MySQL/PostgreSQL for production</li>
+            <li><strong>Full TypeScript</strong> — End-to-end type safety across entities, queries, fields, and API handlers</li>
+            <li><strong>18 Field Types</strong> — string, text, integer, float, boolean, email, date, link, file, image, color, and more</li>
+            <li><strong>Drupal Migration</strong> — Analyze, generate schemas, and migrate content via CLI</li>
+            <li><strong>Event System</strong> — Async event bus with priority-ordered hooks</li>
+            <li><strong>Validation</strong> — Server-side field constraints: required, max_length, pattern, and custom validators</li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <h3 class="feature-group-title orange">Enterprise</h3>
+          <ul class="feature-list">
+            <li><strong>Auth &amp; Permissions</strong> — RBAC with 19 permissions, sessions, password reset, CSRF</li>
+            <li><strong>Multilingual</strong> — 16 default languages with translation CRUD and language negotiation</li>
+            <li><strong>Search</strong> — FTS5 full-text search with porter stemming and auto-indexing</li>
+            <li><strong>Scheduled Publishing</strong> — Time-based content state transitions with cron</li>
+            <li><strong>Content Locking</strong> — Pessimistic edit locking with TTL, renewal, admin break</li>
+            <li><strong>Config Sync</strong> — Import/export all configuration as JSON with diff</li>
+            <li><strong>Rate Limiting</strong> — Per-route rate limits for auth, mutations, and read endpoints</li>
+            <li><strong>Queue System</strong> — Persistent task queue with claim, release, and background processing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="compat-callout">
+        <h3>100% Drupal-Compatible Database</h3>
+        <p>
+          drop.js generates a byte-identical database schema to Drupal 11.
+          Export your SQLite database and import it directly into a Drupal installation — all content,
+          fields, taxonomy, and configuration transfer seamlessly. Migrate from Drupal or back to it at any time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Example Section -->
+  <section class="code-example" id="code">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Content in, APIs out</span>
+        <h2 class="section-title">Manage in the admin UI, consume over APIs</h2>
+        <p class="section-subtitle">
+          Create and manage content through the admin interface — the same entity/field/bundle model as Drupal.
+          Consume it headlessly via REST, GraphQL, or JSON:API.
+        </p>
+      </div>
+
+      <div class="code-panels">
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span class="code-panel-title">GET /api/node/article/1</span>
+          </div>
+          <pre>&#123;
+  <span class="syn-key">"data"</span><span class="syn-punctuation">:</span> &#123;
+    <span class="syn-key">"nid"</span><span class="syn-punctuation">:</span> <span class="syn-number">1</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"type"</span><span class="syn-punctuation">:</span> <span class="syn-string">"article"</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"title"</span><span class="syn-punctuation">:</span> <span class="syn-string">"Hello World"</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"body"</span><span class="syn-punctuation">:</span> &#123; <span class="syn-key">"value"</span><span class="syn-punctuation">:</span> <span class="syn-string">"My first post."</span> &#125;<span class="syn-punctuation">,</span>
+    <span class="syn-key">"field_tags"</span><span class="syn-punctuation">:</span> <span class="syn-punctuation">[</span><span class="syn-number">3</span><span class="syn-punctuation">,</span> <span class="syn-number">7</span><span class="syn-punctuation">]</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"field_image"</span><span class="syn-punctuation">:</span> <span class="syn-string">"/files/hero.jpg"</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"status"</span><span class="syn-punctuation">:</span> <span class="syn-number">1</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"uid"</span><span class="syn-punctuation">:</span> <span class="syn-number">1</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"created"</span><span class="syn-punctuation">:</span> <span class="syn-number">1709856000</span><span class="syn-punctuation">,</span>
+    <span class="syn-key">"changed"</span><span class="syn-punctuation">:</span> <span class="syn-number">1709856000</span>
+  &#125;
+&#125;</pre>
+        </div>
+
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span class="code-panel-title">API Endpoints</span>
+          </div>
+          <pre><span class="syn-comment">REST</span>
+<span class="syn-string">GET    /api/node/article</span>
+<span class="syn-string">GET    /api/node/article/:id</span>
+<span class="syn-string">POST   /api/node/article</span>
+<span class="syn-string">PATCH  /api/node/article/:id</span>
+<span class="syn-string">DELETE /api/node/article/:id</span>
+
+<span class="syn-comment">Query</span>
+<span class="syn-string">GET /api/node/article?sort=-created</span>
+<span class="syn-string">GET /api/node/article?status=1&amp;limit=10</span>
+
+<span class="syn-comment">GraphQL</span>
+<span class="syn-string">POST /api/graphql</span>
+
+<span class="syn-comment">JSON:API</span>
+<span class="syn-string">Accept: application/vnd.api+json</span>
+
+<span class="syn-comment">Swagger</span>
+<span class="syn-string">GET /api/docs</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section class="architecture" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Architecture</span>
+        <h2 class="section-title">One package, clean domains</h2>
+        <p class="section-subtitle">
+          A single <code>dropjs</code> package with domain-based modules — everything included, nothing to wire up.
+        </p>
+      </div>
+
+      <div class="arch-diagram">
+        <div class="arch-layer">
+          <div class="arch-box app-layer">Your Application</div>
+        </div>
+
+        <div class="arch-connector">|</div>
+
+        <div class="arch-layer">
+          <div class="arch-box core-layer">dropjs</div>
+        </div>
+
+        <div class="arch-connector">|</div>
+
+        <div class="arch-modules">
+          <div class="arch-module">core</div>
+          <div class="arch-module">api</div>
+          <div class="arch-module">auth</div>
+          <div class="arch-module">field</div>
+        </div>
+
+        <div class="arch-modules">
+          <div class="arch-module">db</div>
+          <div class="arch-module">migrate</div>
+          <div class="arch-module">admin</div>
+          <div class="arch-module">cli</div>
+        </div>
+
+        <div class="arch-connector">|</div>
+
+        <div class="arch-modules-row">
+          <div class="arch-module">SQLite</div>
+          <div class="arch-module">MySQL / PostgreSQL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Section -->
+  <section class="quickstart" id="quickstart">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Quick Start</span>
+        <h2 class="section-title">Up and running in seconds</h2>
+        <p class="section-subtitle">
+          Three commands. That's all it takes.
+        </p>
+      </div>
+
+      <div class="quickstart-terminal">
+        <div class="terminal-header">
+          <span class="code-dot red"></span>
+          <span class="code-dot yellow"></span>
+          <span class="code-dot green"></span>
+          <span class="terminal-title">Terminal</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="cmd">npx create-drop-app my-site</span>
+          </div>
+          <div class="terminal-line">
+            <span class="output">Creating drop.js project in ./my-site...</span>
+          </div>
+          <div class="terminal-line">&nbsp;</div>
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="cmd">cd my-site</span>
+          </div>
+          <div class="terminal-line">&nbsp;</div>
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="cmd">npx drop dev</span>
+          </div>
+          <div class="terminal-line">
+            <span class="output">Server running at http://localhost:3000</span>
+          </div>
+          <div class="terminal-line">
+            <span class="output">Admin UI at http://localhost:3000/admin</span>
+          </div>
+          <div class="terminal-line">
+            <span class="output">API at http://localhost:3000/api</span>
+          </div>
+          <div class="terminal-line">
+            <span class="output">Swagger docs at http://localhost:3000/api/docs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ===================================================
+     HERO SECTION
+     =================================================== */
+
+  .hero {
+    padding: 10rem 0 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, var(--accent-cyan-dim) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 30%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-purple-dim) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    border: 1px solid rgba(29, 159, 252, 0.25);
+    background: rgba(29, 159, 252, 0.08);
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 .gradient-text {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 50%, var(--accent-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: none;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    color: var(--bg-primary);
+    box-shadow: 0 4px 20px rgba(29, 159, 252, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(29, 159, 252, 0.45);
+    color: var(--bg-primary);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+  }
+
+  .hero-install {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-install code {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background: var(--bg-code);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+
+  .hero-install code .prompt {
+    color: var(--accent-green);
+    margin-right: 0.5rem;
+  }
+
+  .hero-install code .cmd {
+    color: var(--text-primary);
+  }
+
+  /* ===================================================
+     STATS BAR
+     =================================================== */
+
+  .stats-bar {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+    min-width: 100px;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+  }
+
+  /* ===================================================
+     FEATURES SECTION
+     =================================================== */
+
+  .features {
+    padding: var(--section-padding);
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-cyan);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .feature-groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .feature-group {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all var(--transition-base);
+  }
+
+  .feature-group:hover {
+    border-color: rgba(29, 159, 252, 0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Center the 2-item second row in the 3-col grid */
+  .feature-group:nth-child(4) {
+    grid-column: 1 / 2;
+    margin-left: auto;
+    width: 100%;
+    max-width: calc((100% * 3 / 2) - 1rem);
+  }
+
+  .feature-group:nth-child(5) {
+    grid-column: 2 / 4;
+    width: 100%;
+    max-width: calc((100% * 3 / 2) - 1rem);
+  }
+
+  .compat-callout {
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(135deg, rgba(29, 159, 252, 0.08), rgba(165, 73, 236, 0.08));
+    border: 1px solid rgba(29, 159, 252, 0.2);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .compat-callout h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .compat-callout p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .feature-group-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .feature-group-title.cyan { color: var(--accent-cyan); }
+  .feature-group-title.purple { color: var(--accent-purple); }
+  .feature-group-title.pink { color: var(--accent-pink); }
+  .feature-group-title.green { color: var(--accent-green); }
+  .feature-group-title.orange { color: var(--accent-orange); }
+
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .feature-list li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .feature-list li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .feature-groups {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .feature-group:nth-child(4),
+    .feature-group:nth-child(5) {
+      grid-column: auto;
+      margin-left: 0;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .feature-groups {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ===================================================
+     CODE EXAMPLE SECTION
+     =================================================== */
+
+  .code-example {
+    padding: var(--section-padding);
+    background: var(--bg-secondary);
+  }
+
+  .code-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .code-tab {
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all var(--transition-fast);
+  }
+
+  .code-tab:hover {
+    color: var(--text-secondary);
+  }
+
+  .code-tab.active {
+    color: var(--accent-cyan);
+    border-bottom-color: var(--accent-cyan);
+  }
+
+  .code-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .code-panel {
+    background: var(--bg-code);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .code-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .code-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .code-dot.red { background: #ff5f57; }
+  .code-dot.yellow { background: #febc2e; }
+  .code-dot.green { background: #28c840; }
+
+  .code-panel-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+  }
+
+  .code-panel pre {
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* Syntax highlighting spans */
+  .syn-keyword { color: var(--syn-keyword); }
+  .syn-string { color: var(--syn-string); }
+  .syn-number { color: var(--syn-number); }
+  .syn-property { color: var(--syn-property); }
+  .syn-type { color: var(--syn-type); }
+  .syn-comment { color: var(--syn-comment); font-style: italic; }
+  .syn-punctuation { color: var(--syn-punctuation); }
+  .syn-function { color: var(--syn-function); }
+  .syn-key { color: var(--syn-key); }
+  .syn-value { color: var(--syn-string); }
+  .syn-operator { color: var(--syn-punctuation); }
+
+  @media (max-width: 768px) {
+    .code-panels {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ===================================================
+     ARCHITECTURE SECTION
+     =================================================== */
+
+  .architecture {
+    padding: var(--section-padding);
+  }
+
+  .arch-diagram {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .arch-layer {
+    margin-bottom: 0.5rem;
+  }
+
+  .arch-box {
+    border-radius: var(--radius-md);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+  }
+
+  .arch-box.app-layer {
+    background: linear-gradient(135deg, rgba(29, 159, 252, 0.12), rgba(165, 73, 236, 0.12));
+    border: 1px solid rgba(29, 159, 252, 0.2);
+    color: var(--accent-cyan);
+  }
+
+  .arch-box.api-layer {
+    background: rgba(165, 73, 236, 0.1);
+    border: 1px solid rgba(165, 73, 236, 0.2);
+    color: var(--accent-purple);
+  }
+
+  .arch-modules {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .arch-module {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+  }
+
+  .arch-module:hover {
+    border-color: rgba(29, 159, 252, 0.3);
+    color: var(--accent-cyan);
+  }
+
+  .arch-modules-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .arch-box.core-layer {
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    color: var(--accent-green);
+  }
+
+  .arch-box.db-layer {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    color: var(--accent-orange);
+  }
+
+  .arch-connector {
+    display: flex;
+    justify-content: center;
+    padding: 0.3rem 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 560px) {
+    .arch-modules {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ===================================================
+     QUICK START SECTION
+     =================================================== */
+
+  .quickstart {
+    padding: var(--section-padding);
+    background: var(--bg-secondary);
+  }
+
+  .quickstart-terminal {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-code);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+  }
+
+  .terminal-body {
+    padding: 1.5rem;
+  }
+
+  .terminal-line {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 2;
+    color: var(--text-secondary);
+  }
+
+  .terminal-line .prompt {
+    color: var(--accent-green);
+    margin-right: 0.5rem;
+  }
+
+  .terminal-line .cmd {
+    color: var(--text-primary);
+  }
+
+  .terminal-line .comment {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .terminal-line .output {
+    color: var(--accent-cyan);
+  }
+</style>
