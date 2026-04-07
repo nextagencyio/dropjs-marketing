@@ -1,25 +1,8 @@
 import './App.css'
 
-function App() {
+function LandingPage() {
   return (
     <>
-      {/* Navigation */}
-      <nav className="nav">
-        <div className="container">
-          <a href="#" className="nav-logo">
-            <img src="/logo-transparent.png" alt="drop.js" className="nav-logo-img" />
-          </a>
-          <ul className="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#code">Code</a></li>
-            <li><a href="#architecture">Architecture</a></li>
-            <li><a href="#quickstart">Quick Start</a></li>
-            <li><a href="https://github.com/nextagencyio/dropjs#readme" target="_blank" rel="noopener noreferrer">Docs</a></li>
-            <li><a href="https://github.com/nextagencyio/dropjs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          </ul>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
@@ -346,46 +329,8 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-brand">
-            Built by{' '}
-            <a
-              href="https://github.com/nextagencyio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              nextagencyio
-            </a>
-          </div>
-          <ul className="footer-links">
-            <li>
-              <a
-                href="https://github.com/nextagencyio/dropjs"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/nextagencyio/dropjs/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Issues
-              </a>
-            </li>
-          </ul>
-          <div className="footer-note">
-            MIT License &middot; drop.js is open source software
-          </div>
-        </div>
-      </footer>
     </>
   )
 }
 
-export default App
+export default LandingPage
