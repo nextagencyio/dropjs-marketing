@@ -13,7 +13,6 @@ const {
   canonical,
 } = Astro.props;
 
-const isBlog = Astro.url.pathname.startsWith('/blog');
 const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).href;
 const ogImageUrl = new URL(ogImage, Astro.site).href;
 ---
@@ -75,24 +74,13 @@ const ogImageUrl = new URL(ogImage, Astro.site).href;
           <img src="/logo-transparent.png" alt="drop.js" class="nav-logo-img" />
         </a>
         <ul class="nav-links">
-          {isBlog ? (
-            <>
-              <li><a href="/">Home</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="https://github.com/nextagencyio/dropjs#readme" target="_blank" rel="noopener noreferrer">Docs</a></li>
-              <li><a href="https://github.com/nextagencyio/dropjs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            </>
-          ) : (
-            <>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#code">Code</a></li>
-              <li><a href="#architecture">Architecture</a></li>
-              <li><a href="#quickstart">Quick Start</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="https://github.com/nextagencyio/dropjs#readme" target="_blank" rel="noopener noreferrer">Docs</a></li>
-              <li><a href="https://github.com/nextagencyio/dropjs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            </>
-          )}
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#code">Code</a></li>
+          <li><a href="/#architecture">Architecture</a></li>
+          <li><a href="/#quickstart">Quick Start</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="https://github.com/nextagencyio/dropjs#readme" target="_blank" rel="noopener noreferrer">Docs</a></li>
+          <li><a href="https://github.com/nextagencyio/dropjs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </div>
     </nav>
