@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dropjs.dev/sitemap.xml
+Sitemap: https://dropjs.org/sitemap.xml
